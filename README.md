@@ -10,6 +10,7 @@ The Color Detection Software is a tool developed for our project aimed at detect
 1. **Getting Started**
     - Prerequisites
     - Installation
+    - Use the model
 2. **Data Collection**
     - Folder Structure
     - Image Selection
@@ -43,6 +44,41 @@ Install the required libraries using pip:
 ```bash
 pip install opencv-python pandas numpy matplotlib scikit-learn
 ```
+
+### 1.3 Use the model
+To use the model, load the `color_detection_model.pkl` file using the Pickle library:
+```python
+import pickle
+
+model = pickle.load(open('color_detection_model.pkl', 'rb'))
+```
+Then, use the `predict` function to predict the color of an image:
+```python
+model.predict([[255, 255, 0]])
+# Output: array([6])
+
+# Or read the rgb values using cv2
+
+import cv2
+
+img = cv2.imread('image.jpg')
+rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+rgb = (image[0][0])
+model.predict([rgb])
+```
+The model returns a numerical value representing the color category. The color categories are as follows:
+
+#
+- 0: Grey
+- 1: Black
+- 2: White
+- 3: Orange
+- 4: Brown
+- 5: Blue
+- 6: Yellow
+- 7: Green
+- 8: Violet
+- 9: Red
 
 ## 2. Data Collection
 ### 2.1 Folder Structure
