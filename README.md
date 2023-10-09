@@ -56,9 +56,10 @@ Then, use the `predict` function to predict the color of an image:
 ```python
 model.predict([[255, 255, 0]])
 # Output: array([6])
+```
+Or read the RGB values using the `cv2` (python-opencv) library
 
-# Or read the rgb values using cv2
-
+```python
 import cv2
 
 img = cv2.imread('image.jpg')
@@ -66,6 +67,7 @@ rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 rgb = (image[0][0])
 model.predict([rgb])
 ```
+
 The model returns a numerical value representing the color category. The color categories are as follows:
 
 #
