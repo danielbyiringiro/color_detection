@@ -3,7 +3,7 @@
 ## Introduction
 The Color Detection Software is a tool developed for our project aimed at detecting the color of bioindicators based on the RGB value of an image. The software utilizes two machine learning models: Decision Trees and K-Nearest Neighbors (KNN). This documentation provides an overview of the software, its functionality, and the process of developing and improving it.
 
-![Image](training_dataset.png)
+![Image](images/training_dataset.png)
 *Figure 1: Sample images processed by the Color Detection Algorithms
 
 ## Table of Contents
@@ -72,10 +72,10 @@ Both Decision Tree and KNN models are evaluated using the accuracy metric, which
 ### 5.2 Accuracy Visualization
 The software generates accuracy vs. parameter plots to visualize the performance of both models and help determine the best model for the task.
 
-![Image](accuracy_dtree.png)
+![Image](images/accuracy_dtree.png)
 *Figure 2: Decision Tree Accuracy Plot*
 
-![Image](accuracy_knn.png)
+![Image](images/accuracy_knn.png)
 *Figure 3: KNN Accuracy Plot*
 
 ## 6. Model Deployment
