@@ -11,6 +11,7 @@ Instead, we have created a proof of concept colour detection software specifical
 The software is supposed to accept an image as input.
 
 ![Image](images/hydrogel.jpeg)
+
 *Figure 0: Sample image of a sodium alginate hydrogels*
 
 The software would then count the number of hydrogels in the image and check for a colour change in each hydrogel. For example, the image above has ~95 hydrogels. Our biosensor has bioindicators meant to react in the presence of lithium and arsenic (a lithium pathfinder). The colour change is a visual indicator of the presence of lithium or arsenic. If the hydrogel has turned red, it means that lithium is present. If the hydrogel has turned yellow, it means that arsenic is present. If the hydrogel has not changed colour, neither lithium nor arsenic is present.
