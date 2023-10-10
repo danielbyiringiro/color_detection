@@ -2,24 +2,32 @@
 
 ## Preamble
 
-Originally, our intended software aimed to capture images of biosensors, count the sodium alginate hydrogels present, and identify any color changes in each hydrogel. The count of hydrogels exhibiting color changes would then serve as the basis for calculating probabilities to be integrated into our mapping software. However, due to limitations in training data, we were unable to develop the full-fledged software as initially planned.
+Initially, our intended software aimed to capture images of biosensors, count the sodium alginate hydrogels present, and identify any colour changes in each hydrogel. The count of hydrogels exhibiting colour change would then serve as the basis for calculating probabilities that would be used as input into our mapping software. However, due to training data limitations, we could not develop the full-fledged software as intended.
 
-Instead, we have created a proof of concept color detection software specifically designed to identify color changes in a single sodium alginate hydrogel. Our current focus is to demonstrate how the automated system was intended to function, showcasing its capabilities within these constraints. We hope to expand upon this software in the future to include the full functionality of our original software.
+Instead, we have created a proof of concept colour detection software specifically designed to identify colour changes in a single sodium alginate hydrogel. Our current focus is to show how the automated system should function, showcasing its capabilities within these constraints. We plan to expand upon this software to include its full functionality.
 
-## How the intended software was supposed to work
+## How the intended software is supposed to work
 
-The software was supposed to accept an image as input.
+The software is supposed to accept an image as input.
 
 ![Image](images/hydrogel.jpeg)
 *Figure 0: Sample image of a sodium alginate hydrogels*
 
-The software would then count the number of hydrogels present in the image and identify any color changes in each hydrogel. For example the image above has ~95 hydrogels. Our bio sensor have bioindicators meants to react in the presence of both lithium and arsenic (a lithium pathfinder). The color change is meant to be a visual indicator of the presence of lithium. If the hydrogel has turned to red it means that lithium is present. While as if the hydrogel has turned to yellow it means that arsenic is present. If the hydrogel has not changed color it means that neither lithium nor arsenic is present.
+The software would then count the number of hydrogels in the image and check for a colour change in each hydrogel. For example, the image above has ~95 hydrogels. Our biosensor has bioindicators meant to react in the presence of lithium and arsenic (a lithium pathfinder). The colour change is a visual indicator of the presence of lithium or arsenic. If the hydrogel has turned red, it means that lithium is present. If the hydrogel has turned yellow, it means that arsenic is present. If the hydrogel has not changed colour, neither lithium nor arsenic is present.
 
-If we have both red and yellow hydrogels then there is a high chance of lithium being present. If we have only red hydrogels then there is a medium chance of lithium being present. If we have only yellow hydrogels then there is a low chance of lithium being present. If we have no red or yellow hydrogels then there is no chance of lithium being present.
+If we have red and yellow hydrogels, there is a high chance of lithium being present. If we only have red hydrogels,  there is a medium chance of lithium being present. If we have only yellow hydrogels, there is a low chance of lithium being present. If we have no red or yellow hydrogels, there is no chance of lithium being present.
 
 The probability of lithium being present is calculated using the following formula:
 
-$$P(Lithium) = \frac{0.5 \cdot (number\_of\_red\_hydrogels + number\_of\_yellow\_hydrogels)}{total\_number\_of\_hydrogels}$$
+$$P(Lithium) = \frac{0.5 \cdot (R + Y)}{N}$$
+
+
+    
+    where 
+
+    R is the number of red hydrogels 
+    Y is the number of yellow hydrogels 
+    N is the total number of hydrogels.
 
 Below is an explanation of the color detection software that we have developed.
 
