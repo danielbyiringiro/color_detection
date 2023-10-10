@@ -30,6 +30,13 @@ $$P(Lithium) = \frac{0.5 \cdot (R + Y)}{N}$$
     Y is the number of yellow hydrogels 
     N is the total number of hydrogels.
 
+- 0.5 is used as a weighting factor. It is chosen based on the expected sensitivity of the hydrogels as bioindicators. It scales the result to be between 0 and 1.
+
+- (R + Y) represents the total count of hydrogels that have changed color. These are the hydrogels that indicate the presence of either lithium or arsenic.
+
+- N is the total number of hydrogels in the image, which provides a baseline for calculating the probability.
+
+
 Below is an explanation of the color detection software that we have developed.
 
 ## Introduction
