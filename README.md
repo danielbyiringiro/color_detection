@@ -2,7 +2,7 @@
 
 ## Preamble
 
-Originally, our intended software aimed to capture images of biosensors, count the sodium alginate hydrogels present, and identify any color changes in each hydrogel. The count of hydrogels exhibiting color changes would then serve as the basis for calculating probabilities to be integrated into our mapping software. However, due to limitations in our knowledge and resources, we were unable to develop the full-fledged software as initially planned.
+Originally, our intended software aimed to capture images of biosensors, count the sodium alginate hydrogels present, and identify any color changes in each hydrogel. The count of hydrogels exhibiting color changes would then serve as the basis for calculating probabilities to be integrated into our mapping software. However, due to limitations in training data, we were unable to develop the full-fledged software as initially planned.
 
 Instead, we have created a proof of concept color detection software specifically designed to identify color changes in a single sodium alginate hydrogel. Our current focus is to demonstrate how the automated system was intended to function, showcasing its capabilities within these constraints. We hope to expand upon this software in the future to include the full functionality of our original software.
 
